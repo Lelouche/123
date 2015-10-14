@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            jniDebuggable false
+        }
+    }
+    productFlavors {
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile files('libs/jsqlparser-0.9.3-SNAPSHOT.jar')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile files('libs/guava-18.0.jar')
+    compile files('libs/core-1.52.0.0.jar')
+    compile files('libs/apfloat.jar')
+    compile files('libs/armeabi.jar')
+}

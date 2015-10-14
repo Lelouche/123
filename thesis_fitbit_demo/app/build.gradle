@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.fitbitcrypt"
+        minSdkVersion 18
+        targetSdkVersion 21
+        multiDexEnabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile project(':cyrptdbmodule')
+
+    compile files('libs/commons-lang-2.3.jar')
+    compile files('libs/jcl-over-slf4j-1.6.1.jar')
+    compile files('libs/joda-time-2.0.jar')
+    compile files('libs/jsch-0.1.53.jar')
+    compile files('libs/json-20090211.jar')
+    compile files('libs/log4j-1.2.16.jar')
+    compile files('libs/servlet-api-2.4.jar')
+    compile files('libs/slf4j-api-1.6.1.jar')
+    compile files('libs/slf4j-log4j12-1.6.1.jar')
+}
