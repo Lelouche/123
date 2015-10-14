@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FitbitIntegration</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- Button Titles -->
+    <string name="login">Log in</string>
+    <string name="send_SSDB">SSDB</string>
+    <string name="send_CSDB">CSDB</string>
+    <string name="send_uncryptdb">UnCryptDB</string>
+
+    <string name="heart">Heart Data</string>
+    <string name="sleep">Sleep Data</string>
+
+    <string name="main_btn1">Send Data</string>
+    <string name="main_btn2">Retrieve Data</string>
+
+    <string name="title_activity_send">SendData</string>
+    <string-array name="select_device_array">
+        <item>Fitbit</item>
+        <item>MSBand</item>
+    </string-array>
+    <!-- Get Layout -->
+    <string-array name="get_data_spinner_array">
+        <item>Heart Data</item>
+        <item>Sleep Data</item>
+    </string-array>
+    <!-- Send Layout -->
+    <string-array name="send_data_spinner_array">
+        <item>UnCryptDB</item>
+        <item>SSDB</item>
+        <item>CSDB</item>
+    </string-array>
+    <!-- Query -->
+    <string-array name="query_array">
+        <item>SELECT time, value FROM heart_rate;</item>
+        <item>SELECT count(value) FROM heart_rate;</item>
+        <item>SELECT SUM(value) FROM heart_rate;</item>
+        <item>SELECT time, value FROM heart_rate where value > 80;</item>
+        <item>SELECT time, value FROM heart_rate ORDER BY value;</item>
+    </string-array>
+</resources>
